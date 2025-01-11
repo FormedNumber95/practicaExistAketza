@@ -68,30 +68,36 @@ public class Main {
 				return;
 			}
 			while (i.hasMoreResources()) {
+				String codigoSocio;
+				String nombreSocio="";
+				String codigoActividad;
+				String nombreActividad="";
 				Element datos=doc.createElement("datos");
 				datosPrincipal.appendChild(datos);
 				Resource r = i.nextResource();
 				String contenido = (String) r.getContent();
 				//codigo del socio
-				String codigoSocio=contenido.split("<CODSOCIO>")[1].split("</CODSOCIO>")[0];
+				codigoSocio=contenido.split("<CODSOCIO>")[1].split("</CODSOCIO>")[0];
 				//nombre del socio
-				String querySocio = "/SOCIOS_GIM/fila_socios[COD="+codigoSocio+"]";
-				ResourceSet resultSocio = servicio.query(query);
-				ResourceIterator iSocio;
-				iSocio = resultSocio.getIterator();
-				Resource rSocio = iSocio.nextResource();
-				String contenidoSocio = (String) rSocio.getContent();
-				String NombreSocio=contenido.split("<NOMBRE>")[0].split("</NOMBRE>")[0];
+				String querySocio = "/SOCIOS_GIM/fila_socios[COD='"+codigoSocio+"']/NOMBRE/text()";
+				ResourceSet resultSocio = servicio.query(querySocio);
+				ResourceIterator iSocio = resultSocio.getIterator();
+				if (iSocio.hasMoreResources()) {
+				    Resource rSocio = iSocio.nextResource();
+				    String contenidoSocio = (String) rSocio.getContent();
+				    nombreSocio = contenidoSocio.trim();
+				}
 				//codigo de la actividad
-				String codigoActividad=contenido.split("<CODACTIV>")[1].split("</CODACTIV>")[0];
-				//nombre de la actividad
-				String queryActividad = "for $uso in /SOCIOS_GIM/fila_socios[cod="+codigoSocio+"] return $uso";
-				ResourceSet resultActividad = servicio.query(query);
-				ResourceIterator iActividad;
-				iActividad = resultActividad.getIterator();
-				Resource rActividad = iActividad.nextResource();
-				String contenidoActividad = (String) rSocio.getContent();
-				String NombreActividad=contenido.split("<NOMBRE>")[0].split("</NOMBRE>")[0];
+				codigoActividad=contenido.split("<CODACTIV>")[1].split("</CODACTIV>")[0];
+				//nombre de la actividad);
+				String queryActividad = "/ACTIVIDADES_GIM/fila_actividades[@cod="+codigoActividad+"]/NOMBRE/text()";
+				ResourceSet resultActividad = servicio.query(queryActividad);
+				ResourceIterator iActividad=resultActividad.getIterator();
+				if (iActividad.hasMoreResources()) {
+					Resource rActividad = iActividad.nextResource();
+				    String contenidoActividad = (String) rActividad.getContent();
+				    nombreActividad = contenidoActividad.trim();
+				}
 				//horas que ha estado
 				String horaInicio=contenido.split("<HORAINICIO>")[1].split("</HORAINICIO>")[0];
 				String horaFin=contenido.split("<HORAFINAL>")[1].split("</HORAFINAL>")[0];
@@ -99,9 +105,9 @@ public class Main {
 				//tipo de la actividad
 				//cuota
 				aniadeElemento(doc, datos, "COD", codigoSocio);
-				aniadeElemento(doc, datos, "NOMBRESOCIO", NombreSocio);
+				aniadeElemento(doc, datos, "NOMBRESOCIO", nombreSocio);
 				aniadeElemento(doc, datos, "CODACTIV", codigoActividad);
-				aniadeElemento(doc, datos, "NOMBREACTIVIDAD", NombreActividad);
+				aniadeElemento(doc, datos, "NOMBREACTIVIDAD", nombreActividad);
 				aniadeElemento(doc, datos, "horas", horas+"");
 			}
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
