@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?><datosPrincipal>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+  &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+  &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+  &lt;FECHA&gt;16/11/09&lt;/FECHA&gt;
+  &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+  &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+  &lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>10</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+  &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+  &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+  &lt;FECHA&gt;16/11/09&lt;/FECHA&gt;
+  &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+  &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+  &lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+  &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+  &lt;CODACTIV&gt;22&lt;/CODACTIV&gt;
+  &lt;FECHA&gt;16/12/09&lt;/FECHA&gt;
+  &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+  &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>22</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+  &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+  &lt;CODACTIV&gt;22&lt;/CODACTIV&gt;
+  &lt;FECHA&gt;16/12/09&lt;/FECHA&gt;
+  &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+  &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;17/11/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>10</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;17/11/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;18/11/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+ &lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>10</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;18/11/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+ &lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;19/11/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>10</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;10&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;19/11/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;18&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;22&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;21/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>22</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;22&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;21/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>10</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+  &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+  &lt;CODACTIV&gt;31&lt;/CODACTIV&gt;
+  &lt;FECHA&gt;22/12/09&lt;/FECHA&gt;
+  &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+  &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>31</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+  &lt;CODSOCIO&gt;10&lt;/CODSOCIO&gt;
+  &lt;CODACTIV&gt;31&lt;/CODACTIV&gt;
+  &lt;FECHA&gt;22/12/09&lt;/FECHA&gt;
+  &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+  &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>2</horas>
+</datos>
+<datos>
+<COD>11</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;11&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;31&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;16/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>31</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;11&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;31&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;16/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>2</horas>
+</datos>
+<datos>
+<COD>11</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;11&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;31&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;19/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>31</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;11&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;31&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;19/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;17&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>2</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;08/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>21</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;08/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;10/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>21</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;10/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;15/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>21</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;15/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;17/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>21</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;21&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;17/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;18&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;19&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;32&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;09/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>32</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;32&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;09/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;32&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;11/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>32</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;32&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;11/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+<datos>
+<COD>13</COD>
+<NOMBRESOCIO>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;32&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;18/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBRESOCIO>
+<CODACTIV>32</CODACTIV>
+<NOMBREACTIVIDAD>&lt;fila_uso&gt;
+   &lt;CODSOCIO&gt;13&lt;/CODSOCIO&gt;
+   &lt;CODACTIV&gt;32&lt;/CODACTIV&gt;
+   &lt;FECHA&gt;18/12/09&lt;/FECHA&gt;
+   &lt;HORAINICIO&gt;20&lt;/HORAINICIO&gt;
+   &lt;HORAFINAL&gt;21&lt;/HORAFINAL&gt;
+&lt;/fila_uso&gt;</NOMBREACTIVIDAD>
+<horas>1</horas>
+</datos>
+</datosPrincipal>
