@@ -20,8 +20,16 @@ import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.base.XMLDBException;
 import org.xmldb.api.modules.XPathQueryService;
 
+/**
+ * The Class Main.
+ */
 public class Main {
 
+	/**
+	 * Metodo que crea la conexion con la base de datos y llama a los metodos para generar los diferentex xml y subirlos.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		try {
 			String driver = "org.exist.xmldb.DatabaseImpl"; //Driver para eXist
@@ -40,16 +48,93 @@ public class Main {
 			col = DatabaseManager.getCollection(URI, usu, usuPwd);
 			if(col == null)
 				System.out.println(" *** LA COLECCION NO EXISTE. ***");
-			generarXML(col);
-			subirXML(col);
+			generarXMLIntermedio(col);
+			subirXML(col,"src/main/resources/archivos/archivo.xml");
+			generarXMLFinal(col);
+			subirXML(col, "src/main/resources/archivos/archivoFinal.xml");
 			col.close(); //borramos
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private static void subirXML(Collection col) {
-		File f=new File("src/main/resources/archivos/archivo.xml");
+	/**
+	 * Generar XML final.
+	 *
+	 * @param col the col
+	 */
+	private static void generarXMLFinal(Collection col) {
+		try {
+			XPathQueryService servicio = (XPathQueryService) col.getService("XPathQueryService", "1.0");
+			DocumentBuilderFactory docFactory=DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder;
+			docBuilder = docFactory.newDocumentBuilder();
+			Document doc=docBuilder.newDocument();
+			//añadir el datosPrincipal para que luego pueda mantenerse la estuctura de <datos>...</datos> por cada uso
+			Element datosPrincipal=doc.createElement("datosPrincipal");
+			doc.appendChild(datosPrincipal);
+			String query = "for $persona in /SOCIOS_GIM/fila_socios return $persona";
+			ResourceSet result = servicio.query(query);
+				ResourceIterator i;
+				i = result.getIterator();
+				if (!i.hasMoreResources()) {
+					System.out.println(" LA CONSULTA NO DEVUELVE NADA.");
+					return;
+				}
+			while (i.hasMoreResources()) {
+				String codigoSocio="";
+				String nombreSocio="";
+				String cuotaFija="";
+				String sumaCuotaAdicional="";
+				int cuotaTotal;
+				Element datos=doc.createElement("datos");
+				datosPrincipal.appendChild(datos);
+				Resource r = i.nextResource();
+				String contenido = (String) r.getContent();
+				//codigo del socio
+				codigoSocio=contenido.split("<COD>")[1].split("</COD>")[0];
+				//nombre del socio
+				nombreSocio=contenido.split("<NOMBRE>")[1].split("</NOMBRE>")[0];
+				//cuota fija
+				cuotaFija=contenido.split("<CUOTA_FIJA>")[1].split("</CUOTA_FIJA>")[0];
+				//suma de cuotas acicionales
+				String queryCuota = "sum(/datosPrincipal/datos[COD='"+codigoSocio+"']/number(translate(cuota_adicional, '€', '')))";
+				ResourceSet resultCuota = servicio.query(queryCuota);
+				ResourceIterator iCuota = resultCuota.getIterator();
+				if (iCuota.hasMoreResources()) {
+				    Resource rCuota = iCuota.nextResource();
+				    String contenidoCuota = (String) rCuota.getContent();
+				    sumaCuotaAdicional = contenidoCuota.trim();
+				}
+				//calcular el total
+				cuotaTotal=Integer.parseInt(cuotaFija)+Integer.parseInt(sumaCuotaAdicional);
+				//añadir los elementos
+				aniadeElemento(doc, datos, "COD", codigoSocio);
+				aniadeElemento(doc, datos, "NOMBRESOCIO", nombreSocio);
+				aniadeElemento(doc, datos, "CUOTA_FIJA", cuotaFija);
+				aniadeElemento(doc, datos, "suma_cuota_adic", sumaCuotaAdicional);
+				aniadeElemento(doc, datos, "cuota_total", cuotaTotal+"");
+			}
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(doc);
+
+            StreamResult streamResult = new StreamResult(new File("src/main/resources/archivos/archivoFinal.xml"));
+            transformer.setOutputProperty(javax.xml.transform.OutputKeys.INDENT, "yes");
+            transformer.transform(source, streamResult);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Subir XML.
+	 *
+	 * @param col the col
+	 * @param ruta La ruta donde se encuentra el archivo
+	 */
+	private static void subirXML(Collection col,String ruta) {
+		File f=new File(ruta);
 		if(!f.canRead()) {
 			System.err.println("Error");
 		}else {
@@ -64,7 +149,13 @@ public class Main {
 		}
 	}
 
-	private static void generarXML(Collection col) throws XMLDBException {
+	/**
+	 * Generar XML Intermedio.
+	 *
+	 * @param col the col
+	 * @throws XMLDBException the XMLDB exception
+	 */
+	private static void generarXMLIntermedio(Collection col) throws XMLDBException {
 		XPathQueryService servicio = (XPathQueryService) col.getService("XPathQueryService", "1.0");
 		try {
 		 DocumentBuilderFactory docFactory=DocumentBuilderFactory.
@@ -167,7 +258,7 @@ public class Main {
 	}
 	
 	/**
-	 * Aniade elemento.
+	 * Aniade elemento como hijo al elemento que se le pase.
 	 *
 	 * @param doc El doc
 	 * @param rowElement El elemento padre
