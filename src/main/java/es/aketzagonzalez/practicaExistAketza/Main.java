@@ -41,9 +41,26 @@ public class Main {
 			if(col == null)
 				System.out.println(" *** LA COLECCION NO EXISTE. ***");
 			generarXML(col);
+			subirXML(col);
 			col.close(); //borramos
 		}catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	private static void subirXML(Collection col) {
+		File f=new File("src/main/resources/archivos/archivo.xml");
+		if(!f.canRead()) {
+			System.err.println("Error");
+		}else {
+			try {
+				Resource nuevoRecurso = col.createResource(f.getName(), "XMLResource");
+				nuevoRecurso.setContent(f);
+				col.storeResource(nuevoRecurso);
+				System.out.println("ALMACENADO");
+			} catch (XMLDBException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
