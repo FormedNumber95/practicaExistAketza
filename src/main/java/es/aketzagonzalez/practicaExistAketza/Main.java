@@ -58,7 +58,7 @@ public class Main {
 			//añadir el datosPrincipal para que luego pueda mantenerse la estuctura de <datos>...</datos> por cada uso
 			Element datosPrincipal=doc.createElement("datosPrincipal");
 			doc.appendChild(datosPrincipal);
-			
+			//consulta
 			String query = "for $uso in /USO_GIMNASIO/fila_uso return $uso";
 	        ResourceSet result = servicio.query(query);
 			ResourceIterator i;
@@ -68,10 +68,12 @@ public class Main {
 				return;
 			}
 			while (i.hasMoreResources()) {
-				String codigoSocio;
+				String codigoSocio="";
 				String nombreSocio="";
-				String codigoActividad;
+				String codigoActividad="";
 				String nombreActividad="";
+				String tipoActividad="";
+				int cantidad;
 				Element datos=doc.createElement("datos");
 				datosPrincipal.appendChild(datos);
 				Resource r = i.nextResource();
@@ -103,12 +105,36 @@ public class Main {
 				String horaFin=contenido.split("<HORAFINAL>")[1].split("</HORAFINAL>")[0];
 				int horas=Integer.parseInt(horaFin)-Integer.parseInt(horaInicio);
 				//tipo de la actividad
-				//cuota
+				String queryActividadTipo = "/ACTIVIDADES_GIM/fila_actividades[@cod='"+codigoActividad+"']/string(@tipo)";
+				ResourceSet resultActividadTipo = servicio.query(queryActividadTipo);
+				ResourceIterator iActividadTipo = resultActividadTipo.getIterator();
+				if (iActividadTipo.hasMoreResources()) {
+				    Resource rActividad = iActividadTipo.nextResource();
+				    tipoActividad = rActividad.getContent().toString().trim();
+				}
+				//añadir
 				aniadeElemento(doc, datos, "COD", codigoSocio);
 				aniadeElemento(doc, datos, "NOMBRESOCIO", nombreSocio);
 				aniadeElemento(doc, datos, "CODACTIV", codigoActividad);
 				aniadeElemento(doc, datos, "NOMBREACTIVIDAD", nombreActividad);
 				aniadeElemento(doc, datos, "horas", horas+"");
+				switch (Integer.parseInt(tipoActividad)) {
+				case 1:
+					cantidad=0;
+					aniadeElemento(doc, datos, "tipoact", "libre horario");
+					break;
+				case 2:
+					cantidad=2;
+					aniadeElemento(doc, datos, "tipoact", "grupo");
+					break;
+				default:
+					cantidad=4;
+					aniadeElemento(doc, datos, "tipoact", "alquila un espacio");
+					break;
+				}
+				//añadir la cuota
+				aniadeElemento(doc, datos, "cuota_adicional", (cantidad*horas)+"€");
+				
 			}
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
